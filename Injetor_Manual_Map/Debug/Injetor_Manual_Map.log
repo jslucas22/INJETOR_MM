@@ -1,0 +1,6 @@
+﻿  fncPrincipal.cpp
+C:\Users\zLucas\Documents\Dev\C++\Projetos Pessoais\INJETORES\MANUAL_MAP\Injetor_Manual_Map\Injetor_Manual_Map\fncPrincipal.cpp(16,11): warning C4129: 'N': sequência de escape de caractere não reconhecida
+C:\Users\zLucas\Documents\Dev\C++\Projetos Pessoais\INJETORES\MANUAL_MAP\Injetor_Manual_Map\Injetor_Manual_Map\fncPrincipal.cpp(39,11): warning C4129: 'N': sequência de escape de caractere não reconhecida
+  injecao.cpp
+C:\Users\zLucas\Documents\Dev\C++\Projetos Pessoais\INJETORES\MANUAL_MAP\Injetor_Manual_Map\Injetor_Manual_Map\injecao.cpp(47,1): error C2059: erro de sintaxe: '}'
+  Gerando Código...

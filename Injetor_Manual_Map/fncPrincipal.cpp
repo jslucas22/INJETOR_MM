@@ -7,19 +7,20 @@ const char Processo[] = "teste.exe";
 
 int main() {
 
+	
+	HANDLE hSnap = CreateToolhelp32Snapshot(TH32CS_SNAPPROCESS, 0);
 	PROCESSENTRY32 PE32{ 0 };
 	PE32.dwSize = sizeof(PE32);
+	BOOL bRet = Process32First(hSnap, &PE32);
+	DWORD idProcesso = 0;
 
-	HANDLE hSnap = CreateToolhelp32Snapshot(TH32CS_SNAPPROCESS, 0);
+
 	if (hSnap == INVALID_HANDLE_VALUE) {
 		DWORD Erro = GetLastError();
 		cout << "Falha no CreateToolhelp32Snapshot 0x%X\N" << endl;
 		system("pause");
 		return 0;
 	}
-
-	DWORD idProcesso = 0;
-	BOOL bRet = Process32First(hSnap, &PE32);
 
 	while (bRet) {
 		if (!strcmp(Processo, PE32.szExeFile)) {
@@ -47,6 +48,5 @@ int main() {
 		return 0;
 	}
 	CloseHandle(hProc);
-
 	return 0;
 }

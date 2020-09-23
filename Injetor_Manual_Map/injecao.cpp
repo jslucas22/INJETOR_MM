@@ -43,5 +43,28 @@ bool MapeamentoManual(HANDLE hProcesso, const char* qtdDll) {
 	File.read(reinterpret_cast<char*>(pBuscarDados), tamanhoArquivo);
 	File.close();
 
-	if(reinterpret_cast<IMAGE_DOS_HEADER*>(pBuscarDados)->e_magic != 0x5A4D)
+	if (reinterpret_cast<IMAGE_DOS_HEADER*>(pBuscarDados)->e_magic != 0x5A4D) {
+		cout << "Arquivo invalido" << endl;
+		delete[]pBuscarDados;
+		return false;
+	}
+	pBakNTCabecalho = reinterpret_cast<IMAGE_NT_HEADERS*>(pBuscarDados + reinterpret_cast<IMAGE_DOS_HEADER*>(pBuscarDados)->e_lfanew);
+	pBakOpCabecalho = &pBakNTCabecalho->OptionalHeader;
+	pBackCabecalho = &pBakNTCabecalho->FileHeader;
+
+#ifdef _WIN64
+
+	if (pBackCabecalho->Machine != IMAGE_FILE_MACHINE_AMD64) {
+		cout << "Plataforma Invalida" << endl;
+		delete[] pBuscarDados;
+		return false;
+	}
+#else
+	if (pBackCabecalho->Machine != IMAGE_FILE_MACHINE_I386) {
+		cout << "Plataforma Invalida" << endl;
+		delete[] pBuscarDados;
+		return false;
+	}
+#endif
+
 }
