@@ -2,7 +2,7 @@
 
 using namespace std;
 
-const char qtdDll[] = "C:\\Users\\zLucas\\Documents\\Dev\\C++\\Projetos Pessoais\\INJETORES\\MANUAL_MAP\\Injetor_Manual_Map\\Teste.dll";
+const char qtdDll[] = "minhaDll.dll";
 const char Processo[] = "teste.exe";
 
 int main() {
@@ -31,7 +31,7 @@ int main() {
 	}
 
 	CloseHandle(hSnap);
-
+	
 	HANDLE hProc = OpenProcess(PROCESS_ALL_ACCESS, FALSE, idProcesso);
 
 	if (!hProc) {
@@ -46,6 +46,6 @@ int main() {
 		system("pause");
 		return 0;
 	}
-	CloseHandle(hProc);
-	return 0;
+  CloseHandle(hProc);
+  return 0;
 }
