@@ -1,3 +1,4 @@
+/*Documentação em breve 24/09/2020*/
 #include "injecao.h"
 
 using namespace std;
