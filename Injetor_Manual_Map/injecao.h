@@ -7,10 +7,9 @@
 
 using f_LoadLibraryA = HINSTANCE(WINAPI*)(const char* nomeArquivo);
 using f_GetProcAddress = UINT_PTR(WINAPI*)(HINSTANCE hModule, const char* nomeProcesso);
-using f_DLL_ENTRY_POINT = BOOL(WINAPI*)(void* cDLL, void* pReservado, DWORD dwRasao);
+using f_DLL_ENTRY_POINT = BOOL(WINAPI*)(void* cDLL, DWORD dwRasao, void* pReservado);
 
-
-struct mapeamento_manual {
+struct MAPEAMENTO_MANUAL {
 	f_LoadLibraryA			pLoadLibraryA;
 	f_GetProcAddress		pObterProcesso;
 	HINSTANCE				hMod;
