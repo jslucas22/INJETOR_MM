@@ -1,4 +1,3 @@
-/*Documentação em breve 24/09/2020*/
 #include "injecao.h"
 
 using namespace std;
@@ -14,6 +13,7 @@ bool MapeamentoManual(HANDLE hProcesso, const char* qtdDll) {
 	IMAGE_FILE_HEADER* pBackCabecalho = nullptr;
 
 	if (!GetFileAttributesA(qtdDll)) {
+		cout << "Arquivo não existe" << endl;
 		return false;
 	}
 
