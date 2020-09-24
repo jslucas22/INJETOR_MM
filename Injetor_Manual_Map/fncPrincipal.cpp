@@ -6,14 +6,12 @@ const char qtdDll[] = "minhaDll.dll";
 const char Processo[] = "teste.exe";
 
 int main() {
-
 	
 	HANDLE hSnap = CreateToolhelp32Snapshot(TH32CS_SNAPPROCESS, 0);
 	PROCESSENTRY32 PE32{ 0 };
 	PE32.dwSize = sizeof(PE32);
 	BOOL bRet = Process32First(hSnap, &PE32);
 	DWORD idProcesso = 0;
-
 
 	if (hSnap == INVALID_HANDLE_VALUE) {
 		DWORD Erro = GetLastError();
