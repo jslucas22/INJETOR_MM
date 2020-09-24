@@ -34,7 +34,6 @@ int main() {
 
 	HANDLE hProc = OpenProcess(PROCESS_ALL_ACCESS, FALSE, idProcesso);
 
-
 	if (!hProc) {
 		DWORD Erro = GetLastError();
 		cout << "Falha ao abrir o Processo: 0x%X\N" << endl;
