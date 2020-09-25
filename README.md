@@ -11,9 +11,9 @@ Porém o que é feito pelo nosso ManualMap são as seguintes coisas:
 * Fazer a injeção do shellcode.
 * Realocar.
 * Corrigir às importações.
-* Fazer o retorno de chamada TLS
-* "Invocar" a Dll Principal
-* Apagar os rastros
+* Fazer o retorno de chamada TLS.
+* "Invocar" a Dll Principal.
+* Apagar os rastros.
 
 O tipo injeção via Manual Map é de grande utilidade para contornar vários anti-cheats...
 pois a dll irá ficar escondida de vários processos que fazem a leitura da memória, tais como o 
