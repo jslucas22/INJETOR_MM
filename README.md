@@ -7,7 +7,7 @@ using namespace std;
 
 int main () { 
 
-cout << "Um injetor de DLL seguro via" << endl;
+cout << "Um injetor de DLL que contorna vários anti cheats" << endl;
 
 return 0;
 }
