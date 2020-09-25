@@ -20,7 +20,7 @@ pois a dll irá ficar escondida de vários processos que fazem a leitura da mem�
 ToolHelp32Snapshot... E também, ele percorrerá à lista de módulos que estão vinculados no 
 Bloco de ambiente de processo (PEB).
 
-# Meu AntiMalware acusou isto ⚠️
+# Anti Malware Bloqueando ⚠️
 Bom, caso isso venha ocorrer, a explicação é bem simples, pode ficar tranquilo quanto a isso,
 caso seu antivírus ou anti malware acusou este software como um arquivo potencialmente indesejado,
 é devido ao controle de memória que é tomado por este... além dele realizar a leitura de tudo 
