@@ -1,4 +1,5 @@
  # 💉 MANUAL_MAP INJECTOR 💉
+ ### um injetor de DLL gratuito
 
 ## Oque é isso ? 🤔
 O Manual Map, de forma bem resumida, ele é um tipo injeção de diretivas de vínculo dinâmicas
