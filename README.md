@@ -39,7 +39,7 @@ caso seu antivírus ou anti malware acusou este software como um arquivo potenci
 é devido ao controle de memória que é tomado por este... além dele realizar a leitura de tudo 
 que está na memória, ele também irá escrever e "libertar" espaço na memória de acesso randômica
 
-# Licença
+# Licença 📃
 
 ```
 MIT License
