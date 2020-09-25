@@ -1,5 +1,17 @@
  # 💉 MANUAL_MAP INJECTOR 💉
- ### um injetor de DLL gratuito
+ 
+ ```cpp
+#include <iostream> 
+
+using namespace std;
+
+int main () { 
+
+cout << "Um injetor de DLL seguro via" << endl;
+
+return 0;
+}
+```
 
 ## Oque é isso ? 🤔
 O Manual Map, de forma bem resumida, ele é um tipo injeção de diretivas de vínculo dinâmicas
@@ -28,3 +40,7 @@ caso seu antivírus ou anti malware acusou este software como um arquivo potenci
 que está na memória, ele também irá escrever e "libertar" espaço na memória de acesso randômica
 
 ![](Resources/Imagens/bg.png)
+```cpp
+/*Baseado no Injetor do GUIDEDHACKING*/
+/*Visite: GUIDEDHACKING.COM*/
+```
