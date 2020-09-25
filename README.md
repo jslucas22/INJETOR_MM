@@ -3,8 +3,7 @@
 O Manual Map, de forma bem resumida, ele emula o tipo de implementação "LoadLibraryA",
 porém o que será feito pelo Manual Map será as seguintes coisas:
 
-*Carregar todos os dados binários brutos.
-*Mapear seções no processo de destino.
+* Carregar todos os dados binários brutos.* Mapear seções no processo de destino.
 *Fazer a injeção de shellcode.
 *Fazer as realocações necessárias.
 *Corrigir às importações.
