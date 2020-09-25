@@ -40,7 +40,7 @@ caso seu antivírus ou anti malware acusou este software como um arquivo potenci
 que está na memória, ele também irá escrever e "libertar" espaço na memória de acesso randômica
 
 # Licença
-zInjector é licenciado com o MIT License. 
+
 ```
 MIT License
 
@@ -64,9 +64,10 @@ LIABILITY, WHETHER IN AN ACTION OF CONTRACT, TORT OR OTHERWISE, ARISING FROM,
 OUT OF OR IN CONNECTION WITH THE SOFTWARE OR THE USE OR OTHER DEALINGS IN THE
 SOFTWARE.
 ```
+
 ![](Resources/Imagens/bg.png)
 
 ```
 Baseado no Injetor do GUIDEDHACKING
 Visite: GUIDEDHACKING.COM
-*/
+```
