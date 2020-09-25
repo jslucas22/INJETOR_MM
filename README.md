@@ -1,4 +1,4 @@
-# MANUAL MAP INJECTOR
+# MAPEAMENTO MANUAL
 
 O Manual Map, de forma bem resumida, ele emula o tipo de implementação "LoadLibraryA",
 porém o que será feito pelo Manual Map será as seguintes coisas:
