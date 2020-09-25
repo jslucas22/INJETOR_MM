@@ -41,6 +41,7 @@ que está na memória, ele também irá escrever e "libertar" espaço na memóri
 
 ![](Resources/Imagens/bg.png)
 ```cpp
-/*Baseado no Injetor do GUIDEDHACKING*/
-/*Visite: GUIDEDHACKING.COM*/
+
+Baseado no Injetor do GUIDEDHACKING
+Visite: GUIDEDHACKING.COM
 ```
