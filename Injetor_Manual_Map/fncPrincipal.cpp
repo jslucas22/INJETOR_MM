@@ -2,16 +2,43 @@
 
 using namespace std;
 
-const char qtdDll[] = "minhaDll.dll";
-const char Processo[] = "teste.exe";
+const char qtdDll[] = "C:\\Users\\zLucas\\Documents\\Dev\\C++\\Projetos Pessoais\\INJETORES\\MANUAL_MAP\\Injetor_Manual_Map\\Teste.dll";
+const char Processo[] = "csgo.exe";
+
+struct variaveis {
+	int escolha;
+	//const char qtdDll[];
+	//const char Processo[];
+}vars;
 
 int main() {
-	
+printf("																						  \n");
+printf("																						  \n");
+printf("	    --------------------------------------------------------------------------------  \n");
+printf("	   |########   #### ##    ##       ## ########  ######  ########  #######  ######## | \n");
+printf("	   |     ##     ##  ###   ##       ## ##       ##    ##    ##    ##     ## ##     ##| \n");
+printf("	   |    ##      ##  ####  ##       ## ##       ##          ##    ##     ## ##     ##| \n");
+printf("	   |   ##       ##  ## ## ##       ## ######   ##          ##    ##     ## ######## | \n");
+printf("	   |  ##        ##  ##  #### ##    ## ##       ##          ##    ##     ## ##   ##  | \n");
+printf("	   | ##         ##  ##   ### ##    ## ##       ##    ##    ##    ##     ## ##    ## | \n");
+printf("	   |########   #### ##    ##  ######  ########  ######     ##     #######  ##     ##| \n");
+printf("	    --------------------------------------------------------------------------------  \n");
+printf("																						  \n");
+
+	cout <<	"					Escolha uma opcao: " << endl;
+	cout << "				      1 - Injetar  2 - Sair" << endl;
+
+	switch(vars.escolha) {
+	case 1: 
+		cout << "Por favor, informe o nome do processo a ser atacado: " << endl;
+		cout << "Agora informe o nome da DLL a ser implementada neste processo" << endl;
+	}
 	HANDLE hSnap = CreateToolhelp32Snapshot(TH32CS_SNAPPROCESS, 0);
 	PROCESSENTRY32 PE32{ 0 };
 	PE32.dwSize = sizeof(PE32);
 	BOOL bRet = Process32First(hSnap, &PE32);
 	DWORD idProcesso = 0;
+
 
 	if (hSnap == INVALID_HANDLE_VALUE) {
 		DWORD Erro = GetLastError();
@@ -29,8 +56,9 @@ int main() {
 	}
 
 	CloseHandle(hSnap);
-	
+
 	HANDLE hProc = OpenProcess(PROCESS_ALL_ACCESS, FALSE, idProcesso);
+
 
 	if (!hProc) {
 		DWORD Erro = GetLastError();
@@ -44,6 +72,6 @@ int main() {
 		system("pause");
 		return 0;
 	}
-  CloseHandle(hProc);
-  return 0;
+	CloseHandle(hProc);
+	return 0;
 }
