@@ -2,7 +2,7 @@
 
 using namespace std;
 
-const char qtdDll[] = "C:\\Users\\zLucas\\Documents\\Dev\\C++\\Projetos Pessoais\\INJETORES\\MANUAL_MAP\\Injetor_Manual_Map\\Teste.dll";
+const char qtdDll[] = "Teste.dll";
 const char Processo[] = "csgo.exe";
 
 struct variaveis {
@@ -30,6 +30,7 @@ printf("																						  \n");
 	case 1: 
 		cout << "Por favor, informe o nome do processo a ser atacado: " << endl;
 		cout << "Agora informe o nome da DLL a ser implementada neste processo" << endl;
+		break;
 	}
 	HANDLE hSnap = CreateToolhelp32Snapshot(TH32CS_SNAPPROCESS, 0);
 	PROCESSENTRY32 PE32{ 0 };
