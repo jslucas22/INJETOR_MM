@@ -7,8 +7,6 @@ const char Processo[] = "csgo.exe";
 
 struct variaveis {
 	int escolha;
-	//const char qtdDll[];
-	//const char Processo[];
 }vars;
 
 int main() {
