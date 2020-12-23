@@ -10,28 +10,7 @@ struct variaveis {
 }vars;
 
 int main() {
-printf("																						  \n");
-printf("																						  \n");
-printf("	    --------------------------------------------------------------------------------  \n");
-printf("	   |########   #### ##    ##       ## ########  ######  ########  #######  ######## | \n");
-printf("	   |     ##     ##  ###   ##       ## ##       ##    ##    ##    ##     ## ##     ##| \n");
-printf("	   |    ##      ##  ####  ##       ## ##       ##          ##    ##     ## ##     ##| \n");
-printf("	   |   ##       ##  ## ## ##       ## ######   ##          ##    ##     ## ######## | \n");
-printf("	   |  ##        ##  ##  #### ##    ## ##       ##          ##    ##     ## ##   ##  | \n");
-printf("	   | ##         ##  ##   ### ##    ## ##       ##    ##    ##    ##     ## ##    ## | \n");
-printf("	   |########   #### ##    ##  ######  ########  ######     ##     #######  ##     ##| \n");
-printf("	    --------------------------------------------------------------------------------  \n");
-printf("																						  \n");
-
-	cout <<	"					Escolha uma opcao: " << endl;
-	cout << "				      1 - Injetar  2 - Sair" << endl;
-
-	switch(vars.escolha) {
-	case 1: 
-		cout << "Por favor, informe o nome do processo a ser atacado: " << endl;
-		cout << "Agora informe o nome da DLL a ser implementada neste processo" << endl;
-		break;
-	}
+	
 	HANDLE hSnap = CreateToolhelp32Snapshot(TH32CS_SNAPPROCESS, 0);
 	PROCESSENTRY32 PE32{ 0 };
 	PE32.dwSize = sizeof(PE32);
