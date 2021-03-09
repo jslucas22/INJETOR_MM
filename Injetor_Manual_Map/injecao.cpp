@@ -110,7 +110,6 @@ bool MapeamentoManual(HANDLE hProcesso, const char* qtdDll) {
 		return false;
 	}
 
-	//WriteProcessMemory(hProcesso, alvo, &data, sizeof(data), nullptr);
 	WriteProcessMemory(hProcesso, ptrShellCode, shellcode, 0x1000, nullptr);
 	HANDLE remoteThread = CreateRemoteThread(hProcesso, nullptr, 0, reinterpret_cast<LPTHREAD_START_ROUTINE>(ptrShellCode), alvo, 0, nullptr);
 
