@@ -205,8 +205,9 @@ bool MapeamentoManual(HANDLE hProcesso, const char* qtdDll) {
 			auto* ptrTLS = reinterpret_cast<IMAGE_TLS_DIRECTORY*>(byteBase + pointerOpc->DataDirectory[IMAGE_DIRECTORY_ENTRY_TLS].VirtualAddress);
 			auto* ptrChamada = reinterpret_cast<PIMAGE_TLS_CALLBACK*>(ptrTLS->AddressOfCallBacks);
 
-			for (; ptrChamada && *ptrChamada; ++ptrChamada)
+			for (; ptrChamada && *ptrChamada; ++ptrChamada) {
 				(*ptrChamada)(byteBase, DLL_PROCESS_ATTACH, nullptr);
+			}
 		}
 		_DLLprincipal(byteBase, DLL_PROCESS_ATTACH, nullptr);
 		pDados->hMod = reinterpret_cast<HINSTANCE>(byteBase);
