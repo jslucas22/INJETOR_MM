@@ -14,9 +14,9 @@ return 0;
 ```
 
 ## Oque é isso ? 🤔
-O Manual Map, de forma bem resumida, ele é um tipo injeção de diretivas de vínculo dinâmicas
-que emula o tipo de implementação "LoadLibraryA".
-Porém o que é feito pelo nosso ManualMap são as seguintes coisas:
+O Manual Map, de forma consisa, é um tipo implementação/injeção de diretivas de vínculo dinâmicas
+que emula o LoadLibraryA.
+Porém o que é feito pelo ManualMap são as seguintes coisas:
 
 * Carregar todos os dados binários brutos.
 * Mapea seções no processo de destino.
