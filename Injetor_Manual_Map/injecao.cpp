@@ -28,7 +28,7 @@ bool MapeamentoManual(HANDLE hProcesso, const char* qtdDll) {
 
 	auto tamanhoArquivo = File.tellg();
 
-	if (tamanhoArquivo < 0x1000) {
+	if (tamanhoArquivo <= 0x0900) {
 		cout << "O tamanho do arquivo é invalido." << endl;
 		File.close();
 		return false;
