@@ -35,8 +35,7 @@ Bloco de ambiente de processo (PEB).
 
 # "Software Malicioso" ⚠️
 Bom, caso o seu anti malware venha a bloquear este software, a explicação é bem simples, 
-caso seu antivírus ou anti malware acusou este software como um arquivo potencialmente indesejado,
-é devido ao controle de memória que é tomado por este... além dele realizar a leitura de tudo 
+devido ao controle de memória que é tomado por este... além dele realizar a leitura de tudo 
 que está na memória, ele também irá escrever e "libertar" espaço na memória de acesso randômica.
 
 # Licença 📃
