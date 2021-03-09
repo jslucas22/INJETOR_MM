@@ -19,12 +19,12 @@ que emula o tipo de implementação "LoadLibraryA".
 Porém o que é feito pelo nosso ManualMap são as seguintes coisas:
 
 * Carregar todos os dados binários brutos.
-* Mapear seções no processo de destino.
-* Fazer a injeção do shellcode.
-* Realocar.
-* Corrigir às importações.
+* Mapea seções no processo de destino.
+* Faz a injeção do shellcode.
+* Realoca.
+* Faz a correção dos imports.
 * Fazer o retorno de chamada TLS.
-* "Invocar" a Dll Principal.
+* "Invoca" a Dll Principal.
 * Apagar os rastros.
 
 ## É realmente seguro? ✅
