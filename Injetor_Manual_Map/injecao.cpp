@@ -13,14 +13,14 @@ bool MapeamentoManual(HANDLE hProcesso, const char* qtdDll) {
 	IMAGE_FILE_HEADER* pBackCabecalho = nullptr;
 
 	if (!GetFileAttributesA(qtdDll)) {
-		cout << "Arquivo não existe" << endl;
+		cout << "Arquivo inexistente" << endl;
 		return false;
 	}
 
 	ifstream File(qtdDll, ios::binary | ios::ate);
 
 	if (File.fail()) {
-		cout << "Falha ao abrir o arquivo: %X" << endl;
+		cout << "Houve um erro ao abrir: %X" << endl;
 		(DWORD)File.rdstate();
 		File.close();
 		return false;
@@ -29,7 +29,7 @@ bool MapeamentoManual(HANDLE hProcesso, const char* qtdDll) {
 	auto tamanhoArquivo = File.tellg();
 
 	if (tamanhoArquivo <= 0x0900) {
-		cout << "O tamanho do arquivo é invalido." << endl;
+		cout << "DLL com tamanho Invalido." << endl;
 		File.close();
 		return false;
 	}
@@ -37,7 +37,7 @@ bool MapeamentoManual(HANDLE hProcesso, const char* qtdDll) {
 	pBuscarDados = new BYTE[static_cast<UINT_PTR>(tamanhoArquivo)];
 
 	if (!pBuscarDados) {
-		cout << "Falha no alocamento de memoria" << endl;
+		cout << "Nao foi possivel fazer o alocamento na memoria" << endl;
 		File.close();
 		return false;
 	}
