@@ -2,8 +2,8 @@
 
 using namespace std;
 
-const char qtdDll[] = "Teste.dll";
-const char Processo[] = "csgo.exe";
+const char qtdDll[] = "";
+const char Processo[] = "";
 
 struct variaveis {
 	int escolha;
@@ -20,7 +20,7 @@ int main() {
 
 	if (hSnap == INVALID_HANDLE_VALUE) {
 		DWORD Erro = GetLastError();
-		cout << "Falha no CreateToolhelp32Snapshot 0x%X\N" << endl;
+		cout << "Houve uma falha na modelagem do CreateToolhelp32Snapshot 0x%X\N" << endl;
 		system("pause");
 		return 0;
 	}
