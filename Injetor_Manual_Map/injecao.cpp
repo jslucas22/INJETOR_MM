@@ -93,7 +93,7 @@ bool MapeamentoManual(HANDLE hProcesso, const char* qtdDll) {
 			if (!WriteProcessMemory(hProcesso, alvo + pSecaoCabecalho->VirtualAddress, pBuscarDados + pSecaoCabecalho->PointerToRawData, pSecaoCabecalho->SizeOfRawData, nullptr)) {
 				cout << "Nao foi possivel mapear a secao" << endl;
 				delete[]pBuscarDados;
-				VirtualFreeEx(hProcesso, alvo, 0, MEM_RELEASE); //EM PROGRESSO
+				VirtualFreeEx(hProcesso, alvo, 0, MEM_RELEASE);
 			}
 		}
 	}
@@ -113,11 +113,14 @@ bool MapeamentoManual(HANDLE hProcesso, const char* qtdDll) {
 	WriteProcessMemory(hProcesso, ptrShellCode, shellcode, 0x1000, nullptr);
 	HANDLE remoteThread = CreateRemoteThread(hProcesso, nullptr, 0, reinterpret_cast<LPTHREAD_START_ROUTINE>(ptrShellCode), alvo, 0, nullptr);
 
-	if (!remoteThread) {
+	if (remoteThread) {
+		cout << "Thread criada com sucesso" << endl;
+		return true;
+	} else {
 		cout << "Falha ao criar a Thread" << endl;
 		VirtualFreeEx(hProcesso, alvo, 0, MEM_RELEASE);
 		VirtualFreeEx(hProcesso, ptrShellCode, 0, MEM_RELEASE);
-		return false;
+		return false;		
 	}
 	CloseHandle(remoteThread);
 	HINSTANCE hVerificar = NULL;
