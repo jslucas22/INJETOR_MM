@@ -7,7 +7,7 @@ using namespace std;
 
 int main () { 
 
-cout << "Um injetor de DLL que contorna vários anti cheats" << endl;
+cout << "Um injetor de DLL via Mapeamento Manual" << endl;
 
 return 0;
 }
