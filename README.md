@@ -25,7 +25,7 @@ Porém o que é feito pelo ManualMap são as seguintes coisas:
 * Faz a correção dos imports.
 * Fazer o retorno de chamada TLS.
 * "Invoca" a Dll Principal.
-* Apagar os rastros.
+* Apaga os rastros.
 
 ## É realmente seguro? ✅
 O tipo injeção via Manual Map é de grande utilidade para contornar vários anti-cheats...
