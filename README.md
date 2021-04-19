@@ -64,7 +64,7 @@ OUT OF OR IN CONNECTION WITH THE SOFTWARE OR THE USE OR OTHER DEALINGS IN THE
 SOFTWARE.
 ```
 
-![](Resources/Imagens/bg.png)
+//![](Resources/Imagens/bg.png)
 
 ```
 Baseado no Injetor do GUIDEDHACKING
