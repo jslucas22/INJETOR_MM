@@ -18,13 +18,13 @@ O Manual Map, de forma consisa, é um tipo implementação/injeção de diretiva
 que emula o LoadLibraryA.
 Porém o que é feito pelo ManualMap são as seguintes coisas:
 
-* Carregar todos os dados binários brutos.
+* Carrega todos os dados binários brutos.
 * Mapea seções no processo de destino.
 * Faz a injeção do shellcode.
 * Realoca.
 * Faz a correção dos imports.
-* Fazer o retorno de chamada TLS.
-* "Invoca" a Dll Principal.
+* Faz o retorno de chamada TLS.
+* Invoca a Dll Principal.
 * Apaga os rastros.
 
 ## É realmente seguro? ✅
